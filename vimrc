@@ -97,3 +97,6 @@ let g:mustache_abbreviations = 1
 " Highlight things over the ruler length "
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%80v.\+/
+
+" Hide *.pyc files
+let NERDTreeIgnore = ['\.pyc$', '\.egg-info$']
