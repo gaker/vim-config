@@ -21,13 +21,14 @@ Bundle "honza/vim-snippets"
 Bundle 'Rykka/riv.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'jmcantrell/vim-virtualenv'
+Bundle 'mustache/vim-mustache-handlebars'
 
 " Color Themes
 Bundle 'flazz/vim-colorschemes'
 
 call vundle#end()            " required
 
-colorscheme Monokai
+colorscheme codeschool
 
 if has("autocmd")
   filetype plugin indent on
@@ -81,11 +82,16 @@ set guifont=Monaco:h16
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
-
 " Mouse support
 if has('mouse')
   set mouse=a
 endif
+
+" Strip whitespace
+autocmd FileType c,cpp,java,php,python,javascript,html autocmd BufWritePre <buffer> :%s/\s\+$//e
+
+" Mustache / Handlebars
+let g:mustache_abbreviations = 1
 
 
 " Highlight things over the ruler length "
