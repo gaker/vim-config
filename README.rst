@@ -11,7 +11,7 @@ Installation
     $ cd ~/ && git clone https://github.com/gaker/vim-config.git
     $ cd vim-config && make
 
-Then open a vim session an execute ``:BundleInstall``
+Then open a vim session and execute ``:BundleInstall``
 
 
 Borrowed From
