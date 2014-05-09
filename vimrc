@@ -19,6 +19,8 @@ Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle "honza/vim-snippets"
 Bundle 'Rykka/riv.vim'
+Bundle 'mileszs/ack.vim'
+Bundle 'jmcantrell/vim-virtualenv'
 
 " Color Themes
 Bundle 'flazz/vim-colorschemes'
@@ -58,9 +60,26 @@ set encoding=utf-8
 set tabstop=4 shiftwidth=4 expandtab
 set listchars=tab:▒░,trail:▓
 set list
+set ruler
+
+" Comments (cmd+/)
+map <D-/> :TComment<cr>
+vmap <D-/> :TComment<cr>gv
+
+" Indent lines with cmd+[ and cmd+]
+nmap <D-]> >>
+nmap <D-[> <<
+vmap <D-[> <gv
+vmap <D-]> >gv
+
 
 " Fonts
 set guifont=Monaco:h16
+
+
+" vim-airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
 
 " Mouse support

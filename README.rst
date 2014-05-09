@@ -14,7 +14,7 @@ Installation
 Then open a vim session an execute ``:BundleInstall``
 
 
-Bordrowed From
+Borrowed From
 -------------
 
 * https://github.com/fatih/subvim
