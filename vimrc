@@ -8,27 +8,25 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'L9'
 Plugin 'scrooloose/nerdtree'
-Bundle "tpope/vim-surround"
-Bundle "gcmt/breeze.vim"
-Bundle 'tomtom/tcomment_vim'
-Bundle 'bling/vim-airline'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'kien/ctrlp.vim'
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
-Bundle "honza/vim-snippets"
-Bundle 'Rykka/riv.vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'jmcantrell/vim-virtualenv'
-Bundle 'mustache/vim-mustache-handlebars'
+Plugin 'tpope/vim-surround'
+Plugin 'gcmt/breeze.vim'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'bling/vim-airline'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'kien/ctrlp.vim'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+Plugin 'mileszs/ack.vim'
+Plugin 'jmcantrell/vim-virtualenv'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'kchmck/vim-coffee-script'
 
 " Color Themes
-Bundle 'flazz/vim-colorschemes'
+Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()            " required
-
-colorscheme codeschool
 
 if has("autocmd")
   filetype plugin indent on
@@ -40,6 +38,8 @@ endif
 
 syntax on
 filetype plugin indent on    " required
+
+colorscheme codeschool
 
 set autoindent
 set complete-=i
@@ -62,6 +62,9 @@ set tabstop=4 shiftwidth=4 expandtab
 set listchars=tab:▒░,trail:▓
 set list
 set ruler
+
+" javascript tabs
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 
 " Comments (cmd+/)
 map <D-/> :TComment<cr>
